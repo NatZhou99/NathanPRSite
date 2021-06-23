@@ -1,12 +1,13 @@
-<html>
-    <head>
-        {% if title %}
-        <title>{{ title }} - NZsite</title>
-        {% else %}
-        <title>Welcome to NZsite!!</title>
-        {% endif %}
-    </head>
-    <body>
-        <h1>Hello, {{ user.username }}!</h1>
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hi, Stranger!!</h1>
+    {% for element in projects %}
+    <div>
+        <p> <strong>Title: {{ element.projectTitle }} </strong>  <br>
+            {{ element.projectSubtitle }} <br>
+            Author: {{element.author}}
+        </p>
+    </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,18 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - NZsite</title>
+      {% else %}
+      <title>Welcome to My Site!!</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>
+            Personal Projects Website!!!:
+            <a href="/index">Home</a>
+            <a href="/login">Resume</a>
+        </div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>

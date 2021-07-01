@@ -116,8 +116,9 @@ hr{
 
   .jumbo {
     text-align: Left;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    margin: 0;
+    margin-top: 5vh;
+    padding: 0;
     border-radius: 0;
     background: none;
   }

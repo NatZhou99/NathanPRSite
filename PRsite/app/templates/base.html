@@ -8,16 +8,14 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" type="text/css" href="static/styles.css">
     </head>
     <body>
-        <!-- Row: Header JUMBOTRON -->
-        <div class="row">
-            <div class="col jumbotron jumbo">
-                <h1 class="display-4">Nathan Zhou</h1>
-                <p class="lead">A simple website where I show off my projects.</p>
-            </div>
-        </div>
         <!-- Row: NAVBAR -->
         <div class="row">
             <div class="col-sm-1">
@@ -55,7 +53,15 @@
             <!-- Row: Everything Else -->
             <div class="col-sm-1"></div>
             <div class="col-sm-9">
-                <div class="row">
+                        <!-- Row: Header JUMBOTRON -->
+                <div class="row border">
+                    <div class="col jumbotron jumbo">
+                        <h1>Nathan Zhou</h1>
+                        <p class="lead">A simple website where I show off my projects.</p>
+                        <hr class="hrColour">
+                    </div>
+                </div>
+                <div class="row border">
                     <div class="col topmargin">
                         {% block content %}{% endblock %}
                     </div>

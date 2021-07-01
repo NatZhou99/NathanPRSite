@@ -10,19 +10,8 @@ from werkzeug.urls import url_parse
 @app.route('/')
 @app.route('/index')
 def index():
-    projects = [
-        {
-            'author': 'Nathan',
-            'projectTitle': 'Some crazy Title',
-            'projectSubtitle': 'Project 1 is about this.'
-        },
-        {
-            'author': 'Nathan, Person 2',
-            'projectTitle': 'Another Bobastic Title',
-            'projectSubtitle': 'Project 2 is about that.'
-        }
-    ]
-    return render_template('index.html', title='Home',projects=projects)
+    
+    return render_template('index.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():

@@ -8,10 +8,10 @@ from app.models import User
 from werkzeug.urls import url_parse
 
 @app.route('/')
-@app.route('/index')
-def index():
+@app.route('/home')
+def home():
     
-    return render_template('index.html')
+    return render_template('home.html', name=True)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():

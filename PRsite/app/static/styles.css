@@ -11,7 +11,9 @@
 
 body{
   padding: 0;
-  margin: 0;
+  margin: 0;  
+  width: 100%;
+  height: 100%;
   background: url(./bgPIC.png) no-repeat center center fixed; 
   background-size: cover;
   color: #ececec;
@@ -29,55 +31,32 @@ body::-webkit-scrollbar-thumb{
   background: #6649b8;
 }
 
-main{
-  margin-left: 5rem;
-  padding: 1rem;
-}
-
 .textPadd{
   padding-left: 15vh;
 }
 
-.navbar{
-  position: fixed;
-  background-color: var(--bg-primary);
-  transition: width 200ms ease;
-}
-
-.navbar-nav{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-}
-
 .nav-item{
-  width: 100%;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 }
 
-.nav-link{
-  display: flex;
-  height: 8rem;
-  align-items: center;  
-  color: var(--text-primary);
+.nav-item a{
   text-decoration: none;
-  filter: grayscale(100%) opacity(0.7);
-  transition: var(--transition-speed);
+  transition: ease-out 2000ms;
+  color: white;
 }
 
-.link-text{
-  display: none;
-  margin-left: 1rem;
+.nav-item a:hover{
+  color: var(--secondaryColour);
+  transition: ease-out 200ms;
 }
 
-.nav-link svg{
-  width: 2rem;
-  min-width: 2rem;
-  margin: 0 1.5rem;
+.in-use{
+  color: var(--secondaryColour);
 }
+
 
 .topmargin{
   margin-top: 3vh;
@@ -89,31 +68,12 @@ hr{
   border: none;
 }
 
-.projectContainer{
-  border: 1px solid var(--secondaryColour);
-  border-radius: 10px;
-  background: #ececec;
-}
-
 .secondaryHeading{
   color: var(--secondaryColour);
 }
 
 /* For larger screens */
 @media only screen and (min-width: 600px) {
-  .navbar {
-    width: 8.33333%;
-    height: 100vh;
-  }
-
-  .navbar:hover {
-    width: 12rem;
-  }
-
-  .navbar:hover .link-text {
-    display: block;
-  }
-
   .jumbo {
     text-align: Left;
     margin: 0;

@@ -16,27 +16,31 @@
         <link rel="stylesheet" type="text/css" href="static/styles.css">
     </head>
     <body>
+    <div class="container">
         <!-- Row: NAVBAR -->
         <div class="row">
             <div class="col-sm-1"></div>
-            <div class="col-sm-7 jumbotron jumbo">
-                {% if name %}
-                    <h1>Nathan Zhou</h1>
-                    <p class="lead">A simple website where I show off my projects.</p>
-                {% else %}
-                {% endif %}
+            <div class="col-sm-8 jumbo">
+                <h2>{{insert}}</h2>
+                <p>{{subheading}}</p>
             </div>
-            <div class="col-sm-1 nav-item"> 
-                    <a href="{{url_for('home')}}">Home</a>
-            </div>
-            <div class="col-sm-1 nav-item">
-                <a href="{{url_for('home')}}">Projects</a>
-            </div>
-            <div class="col-sm-1 nav-item">  
-                <a href="{{url_for('login')}}">Resume</a>
-            </div>
-            <div class="col-sm-1"></div>
+
+            {% if active[0] %} <!-- Which page is active?-->
+            <div class="col-sm-1 nav-item active"><a href="{{url_for('home')}}">Home</a></div>
+            <div class="col-sm-1 nav-item"><a href="{{url_for('projects')}}">Projects</a></div>
+            <div class="col-sm-1 nav-item"><a href="{{url_for('login')}}">Resume</a></div>
+            {% elif active[1] %}
+            <div class="col-sm-1 nav-item"><a href="{{url_for('home')}}">Home</a></div>
+            <div class="col-sm-1 nav-item active"><a href="{{url_for('projects')}}">Projects</a></div>
+            <div class="col-sm-1 nav-item"><a href="{{url_for('login')}}">Resume</a></div>
+            {% else %}
+            
+            <div class="col-sm-1 nav-item"><a href="{{url_for('home')}}">Home</a></div>
+            <div class="col-sm-1 nav-item"><a href="{{url_for('projects')}}">Projects</a></div>
+            <div class="col-sm-1 nav-item active"><a href="{{url_for('login')}}">Resume</a></div>
+            {% endif %}
         </div>
+        
         <div class="row">
             <div class="col">
                 <hr class="hrColour">
@@ -46,5 +50,6 @@
         <div>
             {% block content %}{% endblock %}
         </div>
+    </div>
     </body>
 </html>            

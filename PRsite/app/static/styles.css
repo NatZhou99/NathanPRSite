@@ -1,10 +1,15 @@
+* {
+  outline: 1px solid red;
+}
+
 :root{
-  font-size: 16px;
+  font-size: 18px;
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --primaryColour: #160942;
   --secondaryColour: #e8063d;
+  --triColour: #fb2056;
   --bg-secondary: #141418;
   --transition-speed: 600ms;
 }
@@ -36,6 +41,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 .nav-item{
+  bottom: -3.5vh;
   text-align: center;
   margin: auto;
   width: 50%;
@@ -53,8 +59,8 @@ body::-webkit-scrollbar-thumb{
   transition: ease-out 200ms;
 }
 
-.in-use{
-  color: var(--secondaryColour);
+.active a{
+  color: var(--triColour);
 }
 
 
@@ -63,15 +69,26 @@ body::-webkit-scrollbar-thumb{
 }
 
 hr{
+  margin-top: 0;
   height: 1px;
   background-color: var(--secondaryColour);
   border: none;
 }
 
 .secondaryHeading{
-  color: var(--secondaryColour);
+  color: var(--text-secondary);
+  text-align: center;
 }
 
+.projectContainer{
+  text-align: center;
+  border: 1.5px solid var(--triColour);
+  background-color: var(--bg-primary);
+}
+
+.center{
+  text-align: center;
+}
 /* For larger screens */
 @media only screen and (min-width: 600px) {
   .jumbo {
@@ -113,7 +130,7 @@ hr{
 
   .jumbo {
     text-align: center;
-    padding: 2% 3% 1% 3%;
+    padding: 2% 2% 2% 2%;
     margin-bottom: 0;
     border-radius: 0;
     background: none;

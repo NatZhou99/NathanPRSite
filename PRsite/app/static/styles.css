@@ -1,3 +1,4 @@
+
 * {
   outline: 1px solid red;
 }
@@ -19,7 +20,7 @@ body{
   margin: 0;  
   width: 100%;
   height: 100%;
-  background: url(./bgPIC.png) no-repeat center center fixed; 
+  background: url(./bgPIC.png) no-repeat center fixed; 
   background-size: cover;
   color: #ececec;
   font-family: 'Roboto', sans-serif;
@@ -34,6 +35,14 @@ body::-webkit-scrollbar-track{
 }
 body::-webkit-scrollbar-thumb{
   background: #6649b8;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active{
+    text-decoration: none;
 }
 
 .textPadd{
@@ -81,6 +90,8 @@ hr{
 }
 
 .projectContainer{
+  height: 25vh;
+  width: 30vh;
   text-align: center;
   border: 1.5px solid var(--triColour);
   background-color: var(--bg-primary);
@@ -88,6 +99,40 @@ hr{
 
 .center{
   text-align: center;
+}
+
+.projectImg img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80%;
+  width: 80%;
+}
+
+.projectImg p{
+  color: white; 
+  text-decoration: none;
+  transition: ease-out 200ms;
+}
+
+.projectImg:hover p{
+  text-decoration: none;
+  color: var(--secondaryColour);
+  transition: ease-out 200ms;
+}
+
+.projectText:hover{
+  text-decoration: none;
+  color: var(--secondaryColour);
+  transition: ease-out 200ms;
+}
+
+#Footer{
+  bottom:0;
+  width:100%;
+  height:5vh;   /* Height of the footer */
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
 }
 /* For larger screens */
 @media only screen and (min-width: 600px) {

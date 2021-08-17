@@ -53,3 +53,14 @@ def resume():
     return render_template('resume.html', title='Resume',insert=insert,subheading=subheading, active=active)
 
     
+################################################## Projects ##################################################
+
+@app.route('/dry_bean')
+def dry_bean():
+    active=[False, True]
+    insert="Dry Bean Dataset Analysis"
+    iframe="https://www.kaggle.com/embed/alasunghainian/dry-bean-dataset?kernelSessionId=69027927" 
+    return render_template('baseproject.html', 
+                            insert=insert, 
+                            iframe=iframe,
+                            active=active)
